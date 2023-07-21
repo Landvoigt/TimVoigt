@@ -1,0 +1,42 @@
+header {
+    height: 90px;
+    max-width: calc(1442px - (95px * 2));
+    padding-left: 95px;
+    padding-right: 95px;
+    background-color: #141d2f;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.links {
+    height: 100%;
+    width: 50%;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        font-size: 23px;
+
+        &:hover {
+            color: #1CDAE6;
+        }
+    }
+}
+
+.active {
+    color: #1CDAE6 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #4B47FF !important;
+    text-decoration-thickness: 3px !important;
+    text-underline-position: under !important;
+    text-underline-offset: 2px !important;
+}
