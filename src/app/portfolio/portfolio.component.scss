@@ -1,0 +1,24 @@
+.headline-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 45px;
+
+    .design-line-left {
+        height: 4px;
+        width: 110px;
+        background-color: #4B47FF;
+    }
+
+    .design-line-right {
+        height: 4px;
+        width: 480px;
+        background-color: #4B47FF;
+    }
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

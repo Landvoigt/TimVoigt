@@ -12,7 +12,7 @@
 
 .design-line-blue {
     width: 100px;
-    height: 3px;
+    height: 4px;
     background-color: #4B47FF;
     border-radius: 10px;
 }
@@ -32,11 +32,11 @@
 
 .content-right {
     display: flex;
-    height: 100%;
     width: 50%;
     position: relative;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-top: 8%;
+    padding-right: 100px;
 }
 
 .background-shape {
@@ -56,6 +56,18 @@
     position: absolute;
     right: 8%;
     align-self: flex-end;
+    justify-self: flex-end;
+    transform: rotate(90deg) translateY(-5px);
+    margin-bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    img {
+        margin-left: 5px;
+        transform: rotate(90deg);
+    }
 }
 
 .headline-box {

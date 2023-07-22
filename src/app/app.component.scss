@@ -1,14 +1,77 @@
+app-header {
+    position: sticky;
+    width: 100%;
+    max-width: 1442px;
+    overflow-y: hidden;
+}
+
 app-introduction {
     height: 85vh;
     display: flex;
     position: relative;
     justify-content: flex-end;
-    padding-left: 95px;
-    padding-right: 95px;
+    width: 100%;
+    max-width: 1442px;
 }
 
 app-description {
     height: 100vh;
     display: flex;
     position: relative;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1442px;
+}
+
+app-skills {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1442px;
+}
+
+app-portfolio {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1442px;
+}
+
+app-first-project {
+    height: 500px;
+    width: 100%;
+    max-width: 1442px;
+    display: flex;
+}
+
+app-second-project {
+    height: 500px;
+    width: 100%;
+    max-width: 1442px;
+    display: flex;
+}
+
+app-third-project {
+    height: 500px;
+    width: 100%;
+    max-width: 1442px;
+    display: flex;
+}
+
+app-forth-project {
+    height: 500px;
+    width: 100%;
+    max-width: 1442px;
+    display: flex;
+}
+
+app-fifth-project {
+    height: 500px;
+    width: 100%;
+    max-width: 1442px;
+    display: flex;
 }
