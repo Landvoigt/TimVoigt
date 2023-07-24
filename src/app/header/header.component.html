@@ -1,11 +1,13 @@
 <header>
     <div>
-        <img>
-        <span style="font-size: 32px;">Tim</span>
+        <img src="assets/img/logo/Tim.png" class="logo" routerLink="/introduction" (click)="scrollTop()">
     </div>
-    <div class="links">
+    <div class="links hide-mobile">
         <a routerLink="/description" routerLinkActive="active" fragment="descriptionSection">About me</a>
         <a routerLink="/skills" routerLinkActive="active" fragment="skillsSection">Skills</a>
         <a routerLink="/portfolio" routerLinkActive="active" fragment="portfolioSection">Portfolio</a>
     </div>
+    <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" (click)="showMobileMenu()"
+        class="links-menu-mobile hide-desktop">
 </header>
+<app-mobile-menu *ngIf="displayMenu" class="d-flex f-column"></app-mobile-menu>

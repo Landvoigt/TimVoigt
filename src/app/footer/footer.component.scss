@@ -1,0 +1,34 @@
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.owner {
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.footer-links-box {
+    display: flex;
+    gap: 40px;
+
+    img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.logo {
+    width: 86px;
+    height: 38px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.text-imprint {
+    margin-left: 2px;
+}

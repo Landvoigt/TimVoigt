@@ -120,6 +120,10 @@ $font-hl: 90px;
 // Font size mobile
 $font-hl-m: 45px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $primary_font;
   font-size: $primary-fs;
@@ -128,6 +132,7 @@ body {
   background-color: #141d2f;
   color: white;
   z-index: -2;
+  position: relative;
 }
 
 app-root {
@@ -144,9 +149,25 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: $font-lg;
+  font-weight: 700;
+  color: #4B47FF;
+  margin: 0;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 400;
+  color: #00BEE8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 button {
   font-family: $primary_font;
   font-size: $font-md;
+  font-weight: 300;
   line-height: 27.6px;
   color: white;
   padding: 15px 30px;
@@ -162,8 +183,32 @@ button {
   }
 }
 
+.button-live-test {
+  background-color: #4B47FF !important;
+  transform: none !important;
+
+  &:hover {
+    background-color: #00BEE8 !important;
+  }
+}
+
+.button-github {
+  background-color: transparent !important;
+  transform: none !important;
+  box-shadow: inset 0px 0px 0px 1px #00BEE8 !important;
+  box-sizing: border-box !important;
+
+  &:hover {
+    background-color: #00BEE8 !important;
+  }
+}
+
 .d-flex {
   display: flex;
+}
+
+.d-none {
+  display: none;
 }
 
 .f-center {
@@ -172,8 +217,68 @@ button {
   align-items: center;
 }
 
+.f-column {
+  flex-direction: column;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.g-90 {
+  gap: 90px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mr-150 {
+  margin-right: 150px;
+}
+
+.ml-180 {
+  margin-left: 180px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.pr-100 {
+  padding-right: 100px;
+}
+
+.pl-100 {
+  padding-left: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 @media (max-width: 720px) {

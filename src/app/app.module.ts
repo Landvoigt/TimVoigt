@@ -15,6 +15,8 @@ import { ForthProjectComponent } from './forth-project/forth-project.component';
 import { FifthProjectComponent } from './fifth-project/fifth-project.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,14 @@ import { FooterComponent } from './footer/footer.component';
     ForthProjectComponent,
     FifthProjectComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    MobileMenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

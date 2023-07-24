@@ -8,12 +8,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .links {
     height: 100%;
-    width: 50%;
+    width: 70%;
     gap: 30px;
     display: flex;
     align-items: center;
@@ -31,6 +30,10 @@ header {
     }
 }
 
+.links-menu-mobile {
+    cursor: pointer;
+}
+
 .active {
     color: #1CDAE6 !important;
     text-decoration: underline !important;
@@ -38,4 +41,24 @@ header {
     text-decoration-thickness: 3px !important;
     text-underline-position: under !important;
     text-underline-offset: 2px !important;
+}
+
+.logo {
+    width: 65px;
+    height: 29px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+app-mobile-menu {
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-color: rgba(20, 29, 47, 0.99);
+    gap: 30px;
+    padding-top: 30%;
+    transition: all 125ms ease-in-out;
 }

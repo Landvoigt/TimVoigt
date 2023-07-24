@@ -1,17 +1,20 @@
 app-header {
-    position: sticky;
-    width: 100%;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
     max-width: 1442px;
     overflow-y: hidden;
+    top: 0;
 }
 
 app-introduction {
-    height: 85vh;
+    height: 80vh;
     display: flex;
     position: relative;
     justify-content: flex-end;
     width: 100%;
     max-width: 1442px;
+    margin-top: 140px;
 }
 
 app-description {
@@ -33,45 +36,69 @@ app-skills {
 }
 
 app-portfolio {
-    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     max-width: 1442px;
+    margin-bottom: 100px;
 }
 
 app-first-project {
-    height: 500px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 1442px;
     display: flex;
+    justify-content: flex-end;
 }
 
 app-second-project {
-    height: 500px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 1442px;
     display: flex;
+    justify-content: flex-end;
 }
 
 app-third-project {
-    height: 500px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 1442px;
+    justify-content: flex-end;
     display: flex;
 }
 
 app-forth-project {
-    height: 500px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 1442px;
+    justify-content: flex-end;
     display: flex;
 }
 
 app-fifth-project {
-    height: 500px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 1442px;
+    justify-content: flex-end;
     display: flex;
+}
+
+app-contact {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    width: 100%;
+    max-width: 1442px;
+}
+
+app-footer {
+    height: 290px;
+    width: 100%;
+    max-width: 1442px;
+    border-top: 4px solid #00BEE8;
 }
