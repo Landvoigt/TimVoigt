@@ -57,6 +57,7 @@
     img {
         height: 30px;
         width: 30px;
+        cursor: pointer;
     }
 
     span {
@@ -207,6 +208,22 @@
 
     @media (max-width: 1070px) {
         top: 0;
+    }
+
+    @media (max-height: 870px) {
+        top: -10%;
+    }
+
+    @media (max-height: 770px) {
+        top: -30%;
+    }
+
+    @media (max-height: 630px) {
+        top: -50%;
+    }
+
+    @media (max-height: 550px) {
+        top: -70%;
     }
 
     img {

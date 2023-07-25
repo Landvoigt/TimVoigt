@@ -1,13 +1,14 @@
-<div class="content pr-standard-desktop pl-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
+<div
+    class="content pr-standard-desktop pl-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
     <div class="d-flex f-column">
         <img src="assets/img/logo/Tim.png" class="logo" routerLink="/introduction" (click)="scrollTop()">
         <span class="text-imprint">Impressum</span>
     </div>
     <span class="owner">© Tim Voigt 2023</span>
     <div class="footer-links-box">
-        <img src="assets/img/icons/github.png">
-        <img src="assets/img/icons/email.png">
-        <img src="assets/img/icons/linkedin.png">
+        <img src="assets/img/icons/github.png" (click)="redirectToGit()">
+        <img src="assets/img/icons/email.png" (click)="redirectToEmail()">
+        <img src="assets/img/icons/linkedin.png" (click)="redirectToLinkedin()">
     </div>
     <span class="text-imprint-mobile">Impressum</span>
 </div>
