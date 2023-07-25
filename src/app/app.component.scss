@@ -101,4 +101,57 @@ app-footer {
     width: 100%;
     max-width: 1442px;
     border-top: 4px solid #00BEE8;
+    background-color: #141d2f;
+}
+
+.background-container {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    max-width: 1442px;
+    background-color: #141d2f;
+    overflow: hidden;
+
+    padding-top: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        object-fit: cover;
+        overflow: visible;
+        z-index: -8;
+    }
+
+    .bg-shadow-description {
+        height: 600px;
+        width: 600px;
+        margin-top: -160px;
+        margin-right: -310px;
+    }
+
+    .bg-shadow-skills {
+        height: 680px;
+        width: 680px;
+        margin-left: -360px;
+    }
+
+    .bg-shadow-third-project {
+        height: 810px;
+        width: 810px;
+        margin-left: -80px;
+    }
+
+    .bg-shadow-fifth-project {
+        position: absolute;
+        right: 0;
+        margin-right: -540px;
+        transform: rotate(80deg);
+    }
+
+    .bg-shadow-footer {
+        transform: rotate(170deg);
+        margin-top: -40px;
+        margin-left: -150px;
+    }
 }

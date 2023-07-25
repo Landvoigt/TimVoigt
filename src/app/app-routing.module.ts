@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DescriptionComponent } from './description/description.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -21,18 +21,4 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule {
-  constructor(private router: Router) {
-    // Listen for the NavigationEnd event instead of scroll event
-    router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        const fragment = this.router.parseUrl(this.router.url).fragment;
-        if (fragment) {
-          const element = document.getElementById(fragment);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      }
-    });
-  }
 }
