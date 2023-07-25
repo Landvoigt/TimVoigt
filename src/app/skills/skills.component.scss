@@ -3,7 +3,23 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding-left: 100px;
+    gap: 100px;
+
+    h1 {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 1200px) {
+        gap: 50px;
+    }
+
+    @media (max-width: 1070px) {
+        flex-direction: column-reverse;
+        justify-content: unset;
+        padding-left: 0;
+        gap: 0;
+    }
+
 
     .icons-container {
         display: flex;
@@ -12,6 +28,23 @@
         height: fit-content;
         column-gap: 110px;
         row-gap: 55px;
+
+        @media (max-width: 1070px) {
+            justify-content: flex-end;
+            column-gap: 100px;
+            row-gap: 50px;
+            width: unset;
+        }
+
+        @media (max-width: 780px) {
+            column-gap: 50px;
+            row-gap: 25px;
+        }
+
+        @media (max-width: 460px) {
+            column-gap: 35px;
+            row-gap: 15px;
+        }
 
         .icons-box {
             width: 80px;
@@ -24,6 +57,10 @@
 
             img {
                 height: 60px;
+
+                @media (max-width: 1070px) {
+                    height: 45px;
+                }
             }
 
             span {
@@ -41,16 +78,36 @@
         flex-direction: column;
         align-items: flex-end;
 
+        @media (max-width: 1070px) {
+            width: unset;
+        }
+
         .headline-container {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 40px;
+            gap: 45px;
+
+            @media (max-width: 1070px) {
+                gap: 20px;
+            }
+
+            @media (max-width: 460px) {
+                gap: 15px;
+            }
 
             .design-line-blue {
                 height: 4px;
                 width: 60px;
                 background-color: #4B47FF;
+
+                @media (max-width: 1070px) {
+                    width: 30px;
+                }
+
+                @media (max-width: 460px) {
+                    width: 20px;
+                }
             }
         }
 
@@ -60,15 +117,27 @@
             align-items: center;
             justify-content: center;
             text-align: end;
-            padding-right: 100px;
+
+            @media (max-width: 1070px) {
+                align-items: flex-end;
+            }
 
             span {
                 margin-top: 10px;
                 margin-bottom: 45px;
+
+                @media (max-width: 1070px) {
+                    max-width: 600px;
+                }
             }
 
             button {
                 margin-left: 10%;
+
+                @media (max-width: 1070px) {
+                    margin-left: 0;
+                    margin-bottom: 75px;
+                }
             }
         }
     }

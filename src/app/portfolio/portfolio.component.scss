@@ -4,16 +4,48 @@
     justify-content: flex-end;
     gap: 45px;
 
+    @media (max-width: 1070px) {
+        gap: 20px;
+    }
+
     .design-line-left {
         height: 4px;
         width: 110px;
         background-color: #4B47FF;
+
+        @media (max-width: 1070px) {
+            width: 90px;
+        }    
+
+        @media (max-width: 600px) {
+            width: 45px;
+        }
+
+        @media (max-width: 460px) {
+            width: 0;
+        }
     }
 
     .design-line-right {
         height: 4px;
         width: 480px;
         background-color: #4B47FF;
+
+        @media (max-width: 1070px) {
+            width: 33%;
+        }    
+
+        @media (max-width: 780px) {
+            width: 28%;
+        }
+
+        @media (max-width: 600px) {
+            width: 20%;
+        }
+
+        @media (max-width: 460px) {
+            width: 12%;
+        }
     }
 }
 

@@ -3,35 +3,62 @@
     align-items: center;
     gap: 45px;
     margin-bottom: 70px;
+
+    @media (max-width: 1070px) {
+        gap: 20px;
+    }
+
+    @media (max-width: 460px) {
+        margin-bottom: 35px;
+        gap: 15px;
+    }
 }
 
 .design-line-blue {
     height: 4px;
-    width: 55px;
+    width: 50px;
     background-color: #4B47FF;
+
+    @media (max-width: 1070px) {
+        width: 30px;
+    }
+
+    @media (max-width: 460px) {
+        width: 20px;
+    }
 }
 
 .contact-text-container-left {
     width: calc(50% - 200px);
-    padding-left: 100px;
-    padding-right: 100px;
+
+    @media (max-width: 1070px) {
+        width: unset;
+        padding-bottom: 45px;
+    }
 
     h4 {
         font-size: 32px;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 45px;
+
+        @media (max-width: 460px) {
+            font-size: 26px;
+        }
     }
 }
 
 form {
     width: 50%;
-    padding-right: 100px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 1070px) {
+        width: unset;
+    }
 }
 
 input,
@@ -65,4 +92,14 @@ textarea {
 img {
     margin-right: 100px;
     cursor: pointer;
+
+    @media (max-width: 1070px) {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .content-mobile {
+        flex-direction: column;
+    }
 }

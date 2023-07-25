@@ -1,11 +1,20 @@
 .content-left {
-    width: 35%;
     height: auto;
+    max-width: 500px;
     padding-top: 8%;
-    padding-left: 100px;
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1200px) {
+        max-width: 450px;
+    }
+
+    @media (max-width: 1070px) {
+        width: 100%;
+        max-width: unset;
+        padding-top: 100px;
+    }
 
     img {
         height: 50px;
@@ -21,32 +30,67 @@
 }
 
 .content-right {
-    width: 50%;
     height: auto;
     position: relative;
     display: flex;
     padding-top: 8%;
-}
 
-.avatar-box {
-    width: 100%;
-    height: fit-content;
-    padding-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @media (max-width: 1070px) {
+        display: none;
+    }
 
-    img {
-        height: 450px;
-        width: 450px;
+    .avatar-box {
+        width: 100%;
+        height: fit-content;
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-        border-radius: 100%;
-        border: 4px solid #00BEE8;
+        @media (max-width: 1400px) {
+            padding-top: 90px;
+        }
+
+        @media (max-width: 1200px) {
+            padding-top: 120px;
+        }
+
+        img {
+            height: 450px;
+            width: 450px;
+
+            border-radius: 100%;
+            border: 4px solid #00BEE8;
+
+            @media (max-width: 1400px) {
+                height: 380px;
+                width: 380px;
+            }
+        }
+
+        .design-line-lightblue {
+            height: 4px;
+            width: 250px;
+            background-color: #00BEE8;
+
+            @media (max-width: 1400px) {
+                width: 150px;
+            }
+            @media (max-width: 1200px) {
+                width: 75px;
+            }
+        }
     }
 }
 
-.design-line-lightblue {
-    height: 4px;
-    width: 250px;
-    background-color: #00BEE8;
+.bg-shadow-description {
+    display: none;
+
+    @media (max-width: 1070px) {
+        display: flex;
+        position: absolute;
+        z-index: -2;
+        top: -160px;
+        right: -450px;
+    }
 }

@@ -3,8 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-left: 100px;
-    padding-right: 100px;
+
+    @media (max-width: 1070px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 }
 
 .owner {
@@ -31,4 +35,16 @@
 
 .text-imprint {
     margin-left: 2px;
+
+    @media (max-width: 1070px) {
+        display: none;
+    }
+}
+
+.text-imprint-mobile {
+    display: none;
+
+    @media (max-width: 1070px) {
+        display: flex;
+    }
 }

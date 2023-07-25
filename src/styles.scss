@@ -147,6 +147,18 @@ h1 {
   font-size: $font-hl;
   font-weight: 700;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 70px;
+  }
+
+  @media (max-width: 1070px) {
+    font-size: 56px;
+  }
+
+  @media (max-width: 460px) {
+    font-size: 48px;
+  }
 }
 
 h2 {
@@ -176,6 +188,7 @@ button {
   background-color: #00BEE8;
   cursor: pointer;
   transition: 125ms ease-in-out;
+  white-space: nowrap;
 
   &:hover {
     background-color: #4B47FF;
@@ -243,6 +256,14 @@ button {
 
 .g-90 {
   gap: 90px;
+
+  @media (max-width: 1070px) {
+    gap: 45px;
+  }
+
+  @media (max-width: 460px) {
+    gap: 20px;
+  }
 }
 
 .mt-100 {
@@ -255,6 +276,10 @@ button {
 
 .mr-150 {
   margin-right: 150px;
+
+  @media (max-width: 1070px) {
+    margin-right: 0;
+  }
 }
 
 .ml-180 {
@@ -263,13 +288,17 @@ button {
 
 .pl-30 {
   padding-left: 30px;
+
+  @media (max-width: 1070px) {
+    padding-left: 0;
+  }
 }
 
-.pr-100 {
+.pr-standard-desktop {
   padding-right: 100px;
 }
 
-.pl-100 {
+.pl-standard-desktop {
   padding-left: 100px;
 }
 
@@ -279,6 +308,10 @@ button {
 
 .text-end {
   text-align: end;
+
+  @media (max-width: 1070px) {
+    text-align: center;
+  }
 }
 
 @media (max-width: 720px) {
@@ -290,5 +323,61 @@ button {
 @media (min-width: 720px) {
   .hide-desktop {
     display: none !important;
+  }
+}
+
+@media (max-width: 1070px) {
+  .pr-standard-mobile {
+    padding-right: 50px;
+  }
+
+  .pl-standard-mobile {
+    padding-left: 50px;
+  }
+
+  .first-project-design-mobile,
+  .third-project-design-mobile,
+  .fifth-project-design-mobile {
+    margin-top: 45px;
+    padding-right: 0;
+    width: 100%;
+    align-items: center;
+
+    h2 {
+      padding-left: 0;
+    }
+
+    h3 {
+      padding-left: 0;
+    }
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .second-project-img-design-mobile,
+  .forth-project-img-design-mobile {
+    margin-left: 0;
+    padding-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .second-project-info-design-mobile,
+  .forth-project-info-design-mobile {
+    margin-top: 45px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .pr-standard-small {
+    padding-right: 35px;
+  }
+
+  .pl-standard-small {
+    padding-left: 35px;
   }
 }

@@ -2,14 +2,15 @@
     <div class="design-line-blue"></div>
     <h1>Contact</h1>
 </div>
-<div class="d-flex">
-    <div class="contact-text-container-left">
+<div class="d-flex content-mobile">
+    <div
+        class="contact-text-container-left pr-standard-desktop pl-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
         <h4>Got a problem to solve?</h4>
         <span class="mb-30">Contact me through this form. I am interested in hearing you, knowing your ideas and
             contributing to your projects with my work.</span>
         <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
-    <form method="POST" (submit)="sendMail()" #myForm ngNativeValidate>
+    <form method="POST" (submit)="sendMail()" #myForm ngNativeValidate class="pr-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
         <input type="text" name="name" placeholder="Your name" #nameInput required>
         <input type="email" name="message" placeholder="Your email" #emailInput required>
         <textarea type="text" name="message" placeholder="Your message" #messageInput required></textarea>
@@ -17,6 +18,6 @@
     </form>
 </div>
 <div class="d-flex j-end mt-100">
-    <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" 
-    routerLink="/introduction" (click)="scrollTop()">
+    <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" routerLink="/introduction"
+        (click)="scrollTop()">
 </div>
