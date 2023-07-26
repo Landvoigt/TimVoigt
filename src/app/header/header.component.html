@@ -8,6 +8,6 @@
         <a routerLink="/portfolio" routerLinkActive="active" fragment="portfolioSection">Portfolio</a>
     </div>
     <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" (click)="showMobileMenu()"
-        class="links-menu-mobile hide-desktop">
+    class="links-menu-mobile hide-desktop">
 </header>
-<app-mobile-menu *ngIf="displayMenu" class="d-flex f-column"></app-mobile-menu>
+<app-mobile-menu [header]="this" [displayMenu]="displayMenu" *ngIf="displayMenu" [@slideInOut] class="d-flex f-column"></app-mobile-menu>
