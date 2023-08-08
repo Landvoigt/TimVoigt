@@ -6,23 +6,26 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  name: string = '';
+  email: string = '';
+  message: string = '';
+
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameInput') nameInput!: ElementRef;
+  @ViewChild('emailInput') emailInput!: ElementRef;
   @ViewChild('messageInput') messageInput!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
   initialImgSrc = 'assets/img/icons/arrow_up_white.png';
-  hoverImgSrc ='assets/img/icons/arrow_up_blue.png';
+  hoverImgSrc = 'assets/img/icons/arrow_up_blue.png';
 
   async sendMail() {
-    console.log('sending mail', this.myForm);
-
     let nameInput = this.nameInput.nativeElement;
-    let messageInput = this.nameInput.nativeElement;
-    let sendButton = this.nameInput.nativeElement;
-    nameInput.disable = true;
-    messageInput.disable = true;
-    sendButton.disable = true;
+    let emailInput = this.emailInput.nativeElement;
+    let messageInput = this.messageInput.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+    this.disableInputs(nameInput, emailInput, messageInput, sendButton);
+
     // animation
     let formData = new FormData();
     formData.append('name', nameInput.value);
@@ -34,11 +37,22 @@ export class ContactComponent {
         body: formData
       }
     );
-
     // text anzeigen gesendet
-    nameInput.disable = false;
-    messageInput.disable = false;
-    sendButton.disable = false;
+    this.enableInputs(nameInput, emailInput, messageInput, sendButton);
+  }
+
+  disableInputs(nameInput: { disabled: boolean; }, emailInput: { disabled: boolean; }, messageInput: { disabled: boolean; }, sendButton: { disabled: boolean; }) {
+    nameInput.disabled = true;
+    emailInput.disabled = true;
+    messageInput.disabled = true;
+    sendButton.disabled = true;
+  }
+
+  enableInputs(nameInput: { disabled: boolean; }, emailInput: { disabled: boolean; }, messageInput: { disabled: boolean; }, sendButton: { disabled: boolean; }) {
+    nameInput.disabled = false;
+    emailInput.disabled = false;
+    messageInput.disabled = false;
+    sendButton.disabled = false;
   }
 
   changeImage() {

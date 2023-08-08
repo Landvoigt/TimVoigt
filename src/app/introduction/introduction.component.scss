@@ -204,7 +204,7 @@
     z-index: -2;
     width: 100%;
     top: 25%;
-    overflow: hidden;
+    overflow-x: clip;
 
     @media (max-width: 1070px) {
         top: 0;
@@ -262,5 +262,26 @@
     img {
         margin-left: 5px;
         transform: rotate(90deg);
+    }
+}
+
+.portrait {
+    height: 660px;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+    top: -228px;
+    left: 72px;
+
+    @media (max-width: 1070px) {
+        height: 470px;
+        top: -38px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: -2;
+    }
+
+    @media (max-width: 720px) {
+        top: -27px;
     }
 }

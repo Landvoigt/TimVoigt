@@ -54,10 +54,17 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
 
     @media (max-width: 1070px) {
         width: unset;
+    }
+
+    span {
+        width: 100%;
+        font-size: 12px;
+        color: #E61C40;
+        margin-bottom: 18px;
+        margin-left: -24px;
     }
 }
 
@@ -74,6 +81,7 @@ textarea {
     font-family: 'Poppins', 'sans-serif';
     font-size: 16px;
     font-weight: 300;
+    margin-bottom: 30px;
 
     &:hover {
         border: 1px solid #00BEE8;
@@ -82,20 +90,61 @@ textarea {
     &::placeholder {
         color: white;
     }
+
+    &:focus-visible {
+        border: none !important;
+        outline: 1px solid #00BEE8 !important;
+    }
+}
+
+.textarea-box,
+.input-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: -25px;
+    cursor: pointer;
 }
 
 textarea {
     height: 200px !important;
     padding-top: 10px;
+    resize: none;
 }
 
-img {
+.resize-icon {
+    position: absolute;
+    bottom: 42px;
+    right: -23px
+}
+
+.icon-pos-adjust {
+    bottom: 22px;
+}
+
+.alert-icon {
+    height: 22px;
+    position: absolute;
+    top: 17px;
+    right: 0;
+}
+
+.arrow {
     margin-right: 100px;
     cursor: pointer;
 
     @media (max-width: 1070px) {
         margin-right: 50px;
     }
+}
+
+.green-border {
+    border-color: #70E61C;
+}
+
+.red-border {
+    border-color: #E61C40;
+    margin-bottom: 10px !important;
 }
 
 @media (max-width: 1070px) {

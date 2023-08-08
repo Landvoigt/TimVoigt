@@ -10,14 +10,37 @@
             contributing to your projects with my work.</span>
         <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
-    <form method="POST" (submit)="sendMail()" #myForm ngNativeValidate class="pr-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
-        <input type="text" name="name" placeholder="Your name" #nameInput required>
-        <input type="email" name="message" placeholder="Your email" #emailInput required>
-        <textarea type="text" name="message" placeholder="Your message" #messageInput required></textarea>
-        <button #sendButton>Send message</button>
+    <form method="POST" (submit)="sendMail()" #myForm="ngForm" ngNativeValidate
+        class="pr-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
+        <div class="input-box">
+            <input type="text" name="name" placeholder="Your name" #nameInput="ngModel" required [(ngModel)]="name"
+                [ngClass]="{'green-border': nameInput.valid && nameInput.dirty, 'red-border': nameInput.invalid && nameInput.dirty}">
+            <img *ngIf="nameInput.invalid && nameInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
+            <img *ngIf="nameInput.valid && nameInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+        </div>
+        <span *ngIf="nameInput.invalid && nameInput.dirty">Your name is required</span>
+        <div class="input-box">
+            <input type="email" name="email" placeholder="Your email" #emailInput="ngModel" required [(ngModel)]="email"
+                [ngClass]="{'green-border': emailInput.valid && emailInput.dirty, 'red-border': emailInput.invalid && emailInput.dirty}">
+            <img *ngIf="emailInput.invalid && emailInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
+            <img *ngIf="emailInput.valid && emailInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+        </div>
+        <span *ngIf="emailInput.invalid && emailInput.dirty">A valid email is required</span>
+        <div class="textarea-box">
+            <textarea type="text" name="message" placeholder="Your message" #messageInput="ngModel" required
+                [(ngModel)]="message"
+                [ngClass]="{'green-border': messageInput.valid && messageInput.touched, 'red-border': messageInput.invalid && messageInput.dirty}"></textarea>
+            <img *ngIf="messageInput.invalid && messageInput.dirty" src="assets/img/icons/incorrect.png"
+                class="alert-icon">
+            <img *ngIf="messageInput.valid && messageInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+            <img src="assets/img/icons/resize.png" class="resize-icon"
+                [ngClass]="{'icon-pos-adjust': messageInput.invalid && messageInput.dirty}">
+        </div>
+        <span *ngIf="messageInput.invalid && messageInput.dirty">Your message is empty</span>
+        <button type="submit" #sendButton>Send message</button>
     </form>
 </div>
 <div class="d-flex j-end mt-100">
     <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" routerLink="/introduction"
-        (click)="scrollTop()">
+        (click)="scrollTop()" class="arrow">
 </div>
