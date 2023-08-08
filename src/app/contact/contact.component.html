@@ -13,22 +13,24 @@
     <form method="POST" (submit)="sendMail()" #myForm="ngForm" ngNativeValidate
         class="pr-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
         <div class="input-box">
-            <input type="text" name="name" placeholder="Your name" #nameInput="ngModel" required [(ngModel)]="name"
+            <input [disabled]="isFormDisabled" type="text" name="name" placeholder="Your name" #nameInput="ngModel"
+                required [(ngModel)]="name"
                 [ngClass]="{'green-border': nameInput.valid && nameInput.dirty, 'red-border': nameInput.invalid && nameInput.dirty}">
             <img *ngIf="nameInput.invalid && nameInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
             <img *ngIf="nameInput.valid && nameInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
         </div>
         <span *ngIf="nameInput.invalid && nameInput.dirty">Your name is required</span>
         <div class="input-box">
-            <input type="email" name="email" placeholder="Your email" #emailInput="ngModel" required [(ngModel)]="email"
+            <input [disabled]="isFormDisabled" type="email" name="email" placeholder="Your email"
+                pattern="^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" #emailInput="ngModel" required [(ngModel)]="email"
                 [ngClass]="{'green-border': emailInput.valid && emailInput.dirty, 'red-border': emailInput.invalid && emailInput.dirty}">
             <img *ngIf="emailInput.invalid && emailInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
             <img *ngIf="emailInput.valid && emailInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
         </div>
         <span *ngIf="emailInput.invalid && emailInput.dirty">A valid email is required</span>
         <div class="textarea-box">
-            <textarea type="text" name="message" placeholder="Your message" #messageInput="ngModel" required
-                [(ngModel)]="message"
+            <textarea [disabled]="isFormDisabled" type="text" name="message" placeholder="Your message"
+                #messageInput="ngModel" required [(ngModel)]="message"
                 [ngClass]="{'green-border': messageInput.valid && messageInput.touched, 'red-border': messageInput.invalid && messageInput.dirty}"></textarea>
             <img *ngIf="messageInput.invalid && messageInput.dirty" src="assets/img/icons/incorrect.png"
                 class="alert-icon">

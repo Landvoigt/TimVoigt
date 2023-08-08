@@ -10,48 +10,34 @@ export class ContactComponent {
   email: string = '';
   message: string = '';
 
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameInput') nameInput!: ElementRef;
-  @ViewChild('emailInput') emailInput!: ElementRef;
-  @ViewChild('messageInput') messageInput!: ElementRef;
-  @ViewChild('sendButton') sendButton!: ElementRef;
+  isFormDisabled: boolean = false;
 
+  @ViewChild('sendButton', { static: false }) sendButton!: ElementRef;
+  
   initialImgSrc = 'assets/img/icons/arrow_up_white.png';
   hoverImgSrc = 'assets/img/icons/arrow_up_blue.png';
 
   async sendMail() {
-    let nameInput = this.nameInput.nativeElement;
-    let emailInput = this.emailInput.nativeElement;
-    let messageInput = this.messageInput.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    this.disableInputs(nameInput, emailInput, messageInput, sendButton);
-
-    // animation
-    let formData = new FormData();
-    formData.append('name', nameInput.value);
-    formData.append('message', messageInput.value);
-    // senden
-    await fetch('https://tim-voigt.developerakademie.net/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: formData
-      }
-    );
-    // text anzeigen gesendet
-    this.enableInputs(nameInput, emailInput, messageInput, sendButton);
-  }
-
-  disableInputs(nameInput: { disabled: boolean; }, emailInput: { disabled: boolean; }, messageInput: { disabled: boolean; }, sendButton: { disabled: boolean; }) {
-    nameInput.disabled = true;
-    emailInput.disabled = true;
-    messageInput.disabled = true;
+    this.isFormDisabled = true;
     sendButton.disabled = true;
-  }
 
-  enableInputs(nameInput: { disabled: boolean; }, emailInput: { disabled: boolean; }, messageInput: { disabled: boolean; }, sendButton: { disabled: boolean; }) {
-    nameInput.disabled = false;
-    emailInput.disabled = false;
-    messageInput.disabled = false;
+    let formData = new FormData();
+    formData.append('name', this.name);
+    formData.append('message', this.message);
+    formData.append('email', this.email);
+
+    try {
+      await fetch('https://tim-voigt.developerakademie.net/send_mail/send_mail.php',
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+    } catch (error) {
+      console.error('Error sending mail:', error);
+    }
+    this.isFormDisabled = false;
     sendButton.disabled = false;
   }
 
