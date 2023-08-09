@@ -10,7 +10,7 @@
             contributing to your projects with my work.</span>
         <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
-    <form method="POST" (submit)="sendMail()" #myForm="ngForm" ngNativeValidate
+    <form method="POST" (submit)="sendMail(myForm)" #myForm="ngForm" ngNativeValidate
         class="pr-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
         <div class="input-box">
             <input [disabled]="isFormDisabled" type="text" name="name" placeholder="Your name" #nameInput="ngModel"

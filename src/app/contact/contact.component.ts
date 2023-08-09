@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -13,20 +14,32 @@ export class ContactComponent {
   isFormDisabled: boolean = false;
 
   @ViewChild('sendButton', { static: false }) sendButton!: ElementRef;
-  
+
   initialImgSrc = 'assets/img/icons/arrow_up_white.png';
   hoverImgSrc = 'assets/img/icons/arrow_up_blue.png';
 
-  async sendMail() {
+  async sendMail(form: NgForm) {
+    this.disableForm();
+    let formData = new FormData();
+    this.getFormInformation(formData);
+    await this.sendData(formData);
+    form.resetForm();
+    this.enableForm();
+  }
+
+  disableForm() {
     let sendButton = this.sendButton.nativeElement;
     this.isFormDisabled = true;
     sendButton.disabled = true;
+  }
 
-    let formData = new FormData();
+  getFormInformation(formData: any) {
     formData.append('name', this.name);
     formData.append('message', this.message);
     formData.append('email', this.email);
+  }
 
+  async sendData(formData: any) {
     try {
       await fetch('https://tim-voigt.developerakademie.net/send_mail/send_mail.php',
         {
@@ -37,6 +50,10 @@ export class ContactComponent {
     } catch (error) {
       console.error('Error sending mail:', error);
     }
+  }
+
+  enableForm() {
+    let sendButton = this.sendButton.nativeElement;
     this.isFormDisabled = false;
     sendButton.disabled = false;
   }
