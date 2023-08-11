@@ -39,6 +39,7 @@ app-description {
 
     @media (max-width: 1070px) {
         height: unset;
+        padding-bottom: 100px;
     }
 }
 
@@ -52,7 +53,7 @@ app-skills {
 
     @media (max-width: 1070px) {
         height: unset;
-        padding-top: 100px;
+        padding-bottom: 100px;
     }
 
 }
@@ -67,7 +68,6 @@ app-portfolio {
 
     @media (max-width: 1070px) {
         height: unset;
-        padding-top: 100px;
         margin-bottom: 0;
     }
 }

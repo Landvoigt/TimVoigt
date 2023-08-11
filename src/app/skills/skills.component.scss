@@ -28,6 +28,7 @@
         height: fit-content;
         column-gap: 110px;
         row-gap: 55px;
+        padding-top: 30px;
 
         @media (max-width: 1070px) {
             justify-content: flex-end;
