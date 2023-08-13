@@ -18,6 +18,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     FifthProjectComponent,
     ContactComponent,
     FooterComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    ImprintComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,

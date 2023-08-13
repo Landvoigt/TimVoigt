@@ -1,13 +1,17 @@
-<header class="pr-standard-desktop pl-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
+<header
+    class="pr-standard-desktop pl-standard-desktop pr-standard-mobile pl-standard-mobile pr-standard-small pl-standard-small">
     <div>
-        <img src="assets/img/logo/Tim.png" class="logo" routerLink="/introduction" (click)="scrollTop()">
+        <img src="assets/img/logo/Tim.png" class="logo" routerLink="/" (click)="scrollTop()">
     </div>
     <div class="links hide-mobile">
-        <a routerLink="/description" routerLinkActive="active" fragment="descriptionSection">About me</a>
-        <a routerLink="/skills" routerLinkActive="active" fragment="skillsSection">Skills</a>
-        <a routerLink="/portfolio" routerLinkActive="active" fragment="portfolioSection">Portfolio</a>
+        <a [class.active]="currentFragment === 'descriptionSection'" routerLink="/" fragment="descriptionSection">About
+            me</a>
+        <a [class.active]="currentFragment === 'skillsSection'" routerLink="/" fragment="skillsSection">Skills</a>
+        <a [class.active]="currentFragment === 'portfolioSection'" routerLink="/"
+            fragment="portfolioSection">Portfolio</a>
     </div>
     <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" (click)="showMobileMenu()"
-    class="links-menu-mobile hide-desktop">
+        class="links-menu-mobile hide-desktop">
 </header>
-<app-mobile-menu [header]="this" [displayMenu]="displayMenu" *ngIf="displayMenu" [@slideInOut] class="d-flex f-column"></app-mobile-menu>
+<app-mobile-menu [header]="this" [displayMenu]="displayMenu" *ngIf="displayMenu" [@slideInOut]
+    class="d-flex f-column"></app-mobile-menu>

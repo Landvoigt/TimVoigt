@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  @Input() showImprint: boolean | undefined;
+
   gitUrl = 'https://github.com/Landvoigt';
   linkedinUrl = 'https://github.com/Landvoigt';
   emailUrl = 'https://github.com/Landvoigt';
+
+  toggleImprint() {
+    console.log('works');
+    this.showImprint = !this.showImprint;
+  }
 
   redirectToGit() {
     window.location.href = this.gitUrl;

@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,20 +9,30 @@ import { Component } from '@angular/core';
   animations: [
     trigger('slideInOut', [
       transition(':enter', [
-        style({transform: 'translateY(-100%)'}),
-        animate('250ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateY(0%)'}))
+        style({ transform: 'translateY(-100%)' }),
+        animate('250ms cubic-bezier(0.35, 0, 0.25, 1)', style({ transform: 'translateY(0%)' }))
       ]),
       transition(':leave', [
-        animate('250ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateY(-100%)'}))
+        animate('250ms cubic-bezier(0.35, 0, 0.25, 1)', style({ transform: 'translateY(-100%)' }))
       ])
     ])
   ]
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  currentFragment: string = '';
+
   initialImgSrc = 'assets/img/icons/bars_white.png';
   hoverImgSrc = 'assets/img/icons/bars_blue.png';
   displayMenu: boolean = false;
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      this.currentFragment = fragment!;
+    });
+  }
 
   public showMobileMenu(): void {
     this.displayMenu = !this.displayMenu;
