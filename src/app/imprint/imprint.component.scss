@@ -1,0 +1,23 @@
+.content {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    font-weight: 300;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    @media(max-width: 1070px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+img {
+    z-index: -1;
+    position: absolute;
+    right: -250px;
+    bottom: -100px;
+    transform: rotate(30deg);
+}
