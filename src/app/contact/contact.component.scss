@@ -64,7 +64,6 @@ form {
         font-size: 12px;
         color: #E61C40;
         margin-bottom: 18px;
-        margin-left: -24px;
     }
 }
 
@@ -102,8 +101,8 @@ textarea {
     position: relative;
     width: 100%;
     height: auto;
-    margin-left: -25px;
     cursor: pointer;
+    display: flex;
 }
 
 textarea {
@@ -114,8 +113,8 @@ textarea {
 
 .resize-icon {
     position: absolute;
-    bottom: 42px;
-    right: -23px
+    bottom: 35px;
+    right: 5px;
 }
 
 .icon-pos-adjust {
@@ -125,16 +124,18 @@ textarea {
 .alert-icon {
     height: 22px;
     position: absolute;
-    top: 17px;
-    right: 0;
+    top: 16px;
+    right: 16px;
 }
 
 .arrow {
+    margin-top: 90px;
+    margin-bottom: 90px;
     margin-right: 100px;
     cursor: pointer;
 
     @media (max-width: 1070px) {
-        margin-right: 50px;
+        margin: 50px;
     }
 }
 
