@@ -4,11 +4,11 @@
         <img src="assets/img/logo/Tim.png" class="logo" routerLink="/" (click)="scrollTop()">
     </div>
     <div class="links hide-mobile">
-        <a [class.active]="currentFragment === 'descriptionSection'" routerLink="/" fragment="descriptionSection">About
+        <a [class.active]="currentFragment === 'about'" routerLink="/" fragment="about">About
             me</a>
-        <a [class.active]="currentFragment === 'skillsSection'" routerLink="/" fragment="skillsSection">Skills</a>
-        <a [class.active]="currentFragment === 'portfolioSection'" routerLink="/"
-            fragment="portfolioSection">Portfolio</a>
+        <a [class.active]="currentFragment === 'skills'" routerLink="/" fragment="skills">Skills</a>
+        <a [class.active]="currentFragment === 'portfolio'" routerLink="/"
+            fragment="portfolio">Portfolio</a>
     </div>
     <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" (click)="showMobileMenu()"
         class="links-menu-mobile hide-desktop">
