@@ -129,7 +129,7 @@ body {
   font-size: $primary-fs;
   font-weight: $regular;
   margin: 0;
-  background-color: #000000;
+  background-color: #141D2F;
   color: white;
   z-index: -2;
   position: relative;
@@ -144,16 +144,18 @@ app-root {
 }
 
 app-mainpage {
-  width: 100%;
-  max-width: 1442px;
+  // max-width: 1442px;
+  width: 100vw;
+  max-width: 100%;
 }
 
 app-imprint {
   margin-top: 90px;
-  width: 100%;
   height: 100%;
   min-height: calc(100vh - 384px);
-  max-width: 1442px;
+  // max-width: 1442px;
+  width: 100vw;
+  max-width: 100%;
 }
 
 h1 {
@@ -307,6 +309,17 @@ button {
   }
 }
 
+.p-project-r-100 {
+  padding-right: 100px;
+}
+.p-project-r-15 {
+  padding-right: 30px;
+
+  @media (max-width: 1070px) {
+    padding-right: 0;
+  }
+}
+
 .pr-standard-desktop {
   padding-right: 100px;
 }
@@ -324,6 +337,54 @@ button {
 
   @media (max-width: 1070px) {
     text-align: center;
+  }
+}
+
+.flex-reverse {
+  @media (max-width: 1070px) {
+      flex-direction: column-reverse !important;
+  }
+}
+
+.project-content {
+  gap: 150px;
+  width: 85%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    // max-width: 500px;
+  }
+
+  @media (max-width: 1600px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1070px) {
+    width: auto;
+    flex-direction: column;
+    gap: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    span {
+      max-width: unset;
+    }
+  }
+}
+
+.first-project-design-mobile,
+.third-project-design-mobile,
+.fifth-project-design-mobile {
+  width: 50%;
+}
+
+.notebook-style-mobile {
+  @media (max-width: 1070px) {
+    justify-content: center;
+    margin-left: 15px;
   }
 }
 
@@ -387,14 +448,14 @@ button {
 
 @media (max-width: 460px) {
   .pr-standard-small {
-    padding-right: 35px;
+    padding-right: 25px;
   }
 
   .pl-standard-small {
-    padding-left: 35px;
+    padding-left: 25px;
   }
 
-  .notebook-small-mobile{
+  .notebook-small-mobile {
     height: 200px;
   }
 }

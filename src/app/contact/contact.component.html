@@ -18,6 +18,7 @@
                 [ngClass]="{'green-border': nameInput.valid && nameInput.dirty, 'red-border': nameInput.invalid && nameInput.dirty}">
             <img *ngIf="nameInput.invalid && nameInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
             <img *ngIf="nameInput.valid && nameInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+            <div *ngIf="sendingMessage" class="loading-icon"></div>
         </div>
         <span *ngIf="nameInput.invalid && nameInput.dirty">Your name is required</span>
         <div class="input-box">
@@ -26,6 +27,7 @@
                 [ngClass]="{'green-border': emailInput.valid && emailInput.dirty, 'red-border': emailInput.invalid && emailInput.dirty}">
             <img *ngIf="emailInput.invalid && emailInput.dirty" src="assets/img/icons/incorrect.png" class="alert-icon">
             <img *ngIf="emailInput.valid && emailInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+            <div *ngIf="sendingMessage" class="loading-icon"></div>
         </div>
         <span *ngIf="emailInput.invalid && emailInput.dirty">A valid email is required</span>
         <div class="textarea-box">
@@ -35,6 +37,7 @@
             <img *ngIf="messageInput.invalid && messageInput.dirty" src="assets/img/icons/incorrect.png"
                 class="alert-icon">
             <img *ngIf="messageInput.valid && messageInput.dirty" src="assets/img/icons/correct.png" class="alert-icon">
+            <div *ngIf="sendingMessage" class="loading-icon"></div>
             <img src="assets/img/icons/resize.png" class="resize-icon"
                 [ngClass]="{'icon-pos-adjust': messageInput.invalid && messageInput.dirty}">
         </div>
@@ -46,3 +49,4 @@
     <img src="{{ initialImgSrc }}" (mouseenter)="changeImage()" (mouseleave)="resetImage()" routerLink="/"
         (click)="scrollTop()" class="arrow">
 </div>
+<div *ngIf="messageArrived" class="success-banner" [@fadeInOut]>Message sent successfully!</div>

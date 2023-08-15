@@ -3,15 +3,16 @@ app-introduction {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     margin-top: 140px;
+    margin-bottom: 100px;
 
     @media (max-width: 1070px) {
-        height: 90vh;
+        height: unset;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 55px;
+        gap: 40px;
     }
 }
 
@@ -20,9 +21,11 @@ app-description {
     display: flex;
     position: relative;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     gap: 100px;
+    margin-top: 30px;
 
     @media (max-width: 1400px) {
         gap: 50px;
@@ -39,8 +42,9 @@ app-skills {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
 
     @media (max-width: 1070px) {
         height: unset;
@@ -53,8 +57,9 @@ app-portfolio {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     margin-bottom: 100px;
 
     @media (max-width: 1070px) {
@@ -66,13 +71,14 @@ app-portfolio {
 .project-container {
     margin-top: 80px;
     margin-bottom: 100px;
+    width: 100vw;
+    max-width: 100%;
     width: 100%;
-    max-width: calc(1442px - 100px);
     display: flex;
     justify-content: flex-end;
 
     @media (max-width: 1070px) {
-        width: unset;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         margin-top: 100px;
@@ -80,17 +86,12 @@ app-portfolio {
     }
 }
 
-.flex-reverse {
-    @media (max-width: 1070px) {
-        flex-direction: column-reverse !important;
-    }
-}
-
 app-contact {
     margin-top: 80px;
     margin-bottom: 100px;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
 
     @media (max-width: 1070px) {
         margin-top: 100px;

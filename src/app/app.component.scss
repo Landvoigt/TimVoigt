@@ -1,16 +1,18 @@
 app-header {
     position: fixed;
     z-index: 10;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     overflow-y: hidden;
     top: 0;
 }
 
 app-footer {
     height: 290px;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     border-top: 4px solid #00BEE8;
     background-color: #141d2f;
 
@@ -23,8 +25,9 @@ app-footer {
     position: absolute;
     z-index: -10;
     height: 100%;
-    width: 100%;
-    max-width: 1442px;
+    // max-width: 1442px;
+    width: 100vw;
+    max-width: 100%;
     background-color: #141d2f;
     overflow: hidden;
 

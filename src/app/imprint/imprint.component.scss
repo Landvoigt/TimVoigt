@@ -12,6 +12,11 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+
+    @media(max-width: 460px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 img {
