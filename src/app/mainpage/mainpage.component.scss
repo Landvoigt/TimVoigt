@@ -3,7 +3,6 @@ app-introduction {
     display: flex;
     flex-direction: column;
     position: relative;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     margin-top: 140px;
@@ -14,6 +13,10 @@ app-introduction {
         flex-direction: column;
         gap: 40px;
     }
+
+    @media (max-height: 630px) and (max-width: 400px) {
+        margin-top: 100px;
+    }
 }
 
 app-description {
@@ -21,7 +24,6 @@ app-description {
     display: flex;
     position: relative;
     justify-content: space-between;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     gap: 100px;
@@ -42,7 +44,6 @@ app-skills {
     display: flex;
     justify-content: center;
     align-items: center;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
 
@@ -57,7 +58,6 @@ app-portfolio {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     margin-bottom: 100px;

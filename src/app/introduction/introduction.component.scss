@@ -37,6 +37,11 @@
         @media (max-width: 1070px) {
             margin-top: -70px;
         }
+
+        @media (max-height: 770px) and (max-width: 400px) {
+            height: 450px;
+            margin-top: -40px;
+        }
     }
 }
 
@@ -144,6 +149,10 @@
 
             @media (max-width: 600px) {
                 font-size: 28px;
+            }
+
+            @media (max-height: 630px) and (max-width: 400px) {
+                margin-bottom: 15px;
             }
         }
 
@@ -287,10 +296,23 @@
 
         @media (max-width: 600px) {
             margin-top: 300px;
+            transform: rotate(7deg) translateX(-5px);
         }
 
         @media (max-width: 480px) {
-            margin-top: 350px;
+            margin-top: 320px;
+        }
+
+        @media (max-width: 420px) {
+            transform: rotate(0deg) translateX(0px);
+        }
+
+        @media (max-height: 770px) and (max-width: 400px) {
+            margin-top: 180px;
+        }
+
+        @media (max-height: 630px) and (max-width: 400px) {
+            margin-top: 160px;
         }
     }
 
@@ -301,7 +323,7 @@
         right: -310px;
         height: 600px;
         width: 600px !important;
-        
+
         @media (max-width: 1750px) {
             bottom: 150px;
         }
@@ -369,12 +391,12 @@
     }
 
     @media (max-width: 480px) {
-        top: 0;
+        top: 5px;
     }
 
     @media (max-width: 400px) {
         height: 400px;
-        top: 50px;
+        top: 55px;
     }
 
     @media (max-height: 870px) and (max-width: 400px) {
@@ -384,16 +406,6 @@
 
     @media (max-height: 770px) and (max-width: 400px) {
         height: 300px;
-        top: 150px;
-    }
-
-    @media (max-height: 630px) and (max-width: 400px) {
-        height: 240px;
-        top: 220px;
-    }
-
-    @media (max-height: 550px) and (max-width: 400px) {
-        height: 200px;
-        top: 250px;
+        top: 0;
     }
 }

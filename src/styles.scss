@@ -135,6 +135,22 @@ body {
   position: relative;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00BEE8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4B47FF;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 app-root {
   position: relative;
   display: flex;
@@ -144,7 +160,6 @@ app-root {
 }
 
 app-mainpage {
-  // max-width: 1442px;
   width: 100vw;
   max-width: 100%;
 }
@@ -153,7 +168,6 @@ app-imprint {
   margin-top: 90px;
   height: 100%;
   min-height: calc(100vh - 384px);
-  // max-width: 1442px;
   width: 100vw;
   max-width: 100%;
 }
