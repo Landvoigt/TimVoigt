@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'imprint', component: ImprintComponent }
 ];
 
-
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
