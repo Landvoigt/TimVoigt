@@ -1,7 +1,6 @@
 app-header {
     position: fixed;
     z-index: 10;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     overflow-y: hidden;
@@ -10,7 +9,6 @@ app-header {
 
 app-footer {
     height: 290px;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     border-top: 4px solid #00BEE8;
@@ -25,7 +23,6 @@ app-footer {
     position: absolute;
     z-index: -10;
     height: 100%;
-    // max-width: 1442px;
     width: 100vw;
     max-width: 100%;
     background-color: #141d2f;
@@ -132,15 +129,20 @@ app-footer {
             margin-top: -40px;
             margin-left: -150px;
 
+            @media (max-width: 1070px) {
+                margin-top: 520px;
+            }
+
             @media (max-width: 600px) {
                 position: absolute;
                 top: 500px;
+                margin-top: 0;
                 height: 500px;
                 width: 500px;
                 margin-left: -170px;
             }
 
-            @media (max-width: 460px) {
+            @media (max-width: 490px) {
                 top: 650px;
                 margin-left: -190px;
             }
