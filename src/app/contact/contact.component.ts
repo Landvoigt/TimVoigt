@@ -61,24 +61,25 @@ export class ContactComponent {
 
   async sendData(formData: any) {
     this.sendingMessage = true;
-  
+
     try {
-      const response = await this.http.post('https://timvoigt.ch/sendmail.php', formData, { responseType: 'text' }).toPromise();
-  
-      if (response === 'success') {
-        // console.log('Email sent successfully!');
-      } else {
-        // console.error('Failed to send email.');
-      }
-  
-      this.sendingMessage = false;
+      // const response = 
+      await this.http.post('https://timvoigt.ch/sendmail.php', formData, { responseType: 'text' }).toPromise();
+
+      // if (response === 'success') {
+      //   // console.log('Email sent successfully!');
+      // } else {
+      //   // console.error('Failed to send email.');
+      // }
+
       this.showSuccessBanner();
+      this.sendingMessage = false;
     } catch (error) {
       console.error('Error sending mail:', error);
       this.sendingMessage = false;
     }
   }
-  
+
 
   enableForm() {
     let sendButton = this.sendButton.nativeElement;
@@ -103,7 +104,7 @@ export class ContactComponent {
     window.scroll({ top: 0, left: 0 });
   }
 
-  
+
   showSuccessBanner() {
     this.messageArrived = true;
 
